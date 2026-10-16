@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error-container": "#ffdad6",
+          "inverse-primary": "#ba1340",
+          "secondary": "#ffb2ba",
+          "surface-container-high": "#2a2a2d",
+          "on-secondary": "#640921",
+          "outline-variant": "#3f3033",
+          "surface-container-lowest": "#0a0a0d",
+          "surface-tint": "#ffb2b8",
+          "on-secondary-container": "#ff97a4",
+          "inverse-surface": "#e4e1e6",
+          "error-container": "#93000a",
+          "on-tertiary-fixed": "#2a1700",
+          "surface-container": "#181820",
+          "on-error": "#690005",
+          "on-primary-fixed-variant": "#91002d",
+          "tertiary-container": "#ca8100",
+          "primary-container": "#ff506f",
+          "surface": "#0e0e11",
+          "on-surface-variant": "#a29aa0",
+          "background": "#0e0e11",
+          "surface-variant": "#22222b",
+          "surface-dim": "#0e0e11",
+          "on-tertiary-fixed-variant": "#653e00",
+          "primary-fixed": "#ffdadb",
+          "on-primary-container": "#5b0019",
+          "on-secondary-fixed": "#400010",
+          "surface-container-low": "#131318",
+          "inverse-on-surface": "#303033",
+          "on-primary": "#ffffff",
+          "on-primary-fixed": "#40000f",
+          "outline": "#5a4042",
+          "tertiary": "#ffb95f",
+          "secondary-fixed": "#ffd9dc",
+          "primary": "#ff4d6d",
+          "tertiary-fixed": "#ffddb8",
+          "surface-bright": "#39393c",
+          "on-surface": "#f1eff3",
+          "on-tertiary-container": "#3e2400",
+          "on-tertiary": "#472a00",
+          "secondary-container": "#832336",
+          "secondary-fixed-dim": "#ffb2ba",
+          "on-background": "#f1eff3",
+          "on-secondary-fixed-variant": "#832336",
+          "surface-container-highest": "#282834",
+          "primary-fixed-dim": "#ffb2b8",
+          "error": "#ffb4ab",
+          "tertiary-fixed-dim": "#ffb95f"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "2.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "space-sm": "0.5rem",
+          "gutter": "1.5rem",
+          "gutter-sm": "1rem",
+          "space-md": "1rem",
+          "space-xl": "2.5rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Newsreader"],
+          "title-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "display-lg": ["Newsreader"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-md": ["Newsreader"],
+          "headline-lg": ["Newsreader"]
+        },
+        "fontSize": {
+          "body-lg": ["1.125rem", { "lineHeight": "1.875rem", "fontWeight": "400" }],
+          "body-sm": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }],
+          "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }],
+          "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+          "title-sm": ["1rem", { "lineHeight": "1.375rem", "fontWeight": "600" }],
+          "title-md": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }],
+          "body-md": ["1rem", { "lineHeight": "1.625rem", "fontWeight": "400" }],
+          "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+          "display-lg": ["3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+          "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "700" }],
+          "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "headline-md": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+          "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.015em", "fontWeight": "500" }]
+        }
+      }
+    }
+  }
+</script></head><body class="bg-[#0e0e11] font-body-md text-[#f1eff3] antialiased flex flex-col min-h-screen selection:bg-[#ff4d6d]/30 selection:text-[#ffb2ba]"><header class="fixed top-0 inset-x-0 z-50 bg-[#0e0e11]/85 backdrop-blur-xl pt-safe border-b border-white/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="LectureJot Logo" class="h-8 w-auto object-contain shrink-0 drop-shadow-[0_0_8px_rgba(255,77,109,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAloMXsUgo3PWqa-M3Rv91MxVRzSCDXGyMan9tSrmnP-qdAkZDXK3xsVeU-DnkLz-WkgpKxIdHVAQY-ngbFlX4Mxb3GKUx9JyxWXjQsWTDRtO4GBg3UuF88UaUHAPBrgRxmfXc2C83SHQlmgNr4S1MxRcogjITH1TX2rvlir54eXnZfH8bkWRVFE5tk9GkWENO8s7inl18hFJPtty2fMnrFFzPU8X7TZWrxbH7jqbScWXOA3ePNDq5SyQ"/><div class="flex flex-col truncate"><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-[#ff758f] font-bold">LAZY STUDENT</span><span class="w-1 h-1 rounded-full bg-[#ff4d6d]/40"></span><span class="font-label-sm text-label-sm text-[#a29aa0] font-medium">Term II</span></div><h1 class="font-title-sm text-title-sm text-[#f1eff3] truncate font-semibold leading-tight">Home Dashboard</h1></div></div><div class="flex items-center gap-1 shrink-0"><button aria-label="Search notes" class="w-10 h-10 rounded-full flex items-center justify-center text-[#b0b0bc] hover:text-white hover:bg-white/[0.06] transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="w-10 h-10 rounded-full flex items-center justify-center text-[#b0b0bc] hover:text-white hover:bg-white/[0.06] relative transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#ff4d6d] shadow-[0_0_6px_#ff4d6d] ring-2 ring-[#0e0e11]"></span></button><div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#400d1c] to-[#25050f] border border-[#ff4d6d]/40 flex items-center justify-center ml-1 shrink-0 shadow-inner"><span class="material-symbols-outlined text-[#ffb2ba] text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-[#0e0e11]"><div class="flex flex-col w-full">
+<!-- Top Greeting & Context Bar -->
+<section class="px-margin-mobile pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/[0.05] border border-white/[0.06] text-[#b0b0bc] font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-[#ff758f]">calendar_today</span>
+<span class="">Monday, Oct 28</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#400a16]/70 border border-[#ff4d6d]/30 text-[#ffb2ba] font-label-sm text-label-sm font-semibold shadow-[0_0_12px_rgba(255,77,109,0.18)]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ff4d6d] animate-pulse"></span>
+<span class="">18.4 hrs quota</span>
+</span>
+</div>
+<button aria-label="Quick calendar view" class="w-8 h-8 rounded-full flex items-center justify-center text-[#b0b0bc] hover:text-white hover:bg-white/[0.06] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">event_note</span>
+</button>
+</div>
+<div class="mt-2">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-[#f8f7f9] tracking-tight font-medium">Good morning, Ola</h2>
+<p class="font-body-sm text-body-sm text-[#a29aa0] mt-0.5">Ready for today's lectures? <span class="text-[#ff758f] font-medium">3 classes scheduled.</span></p>
+</div>
+</section>
+<!-- Hero Record Action Card -->
+<section class="px-margin-mobile py-space-sm">
+<div class="relative overflow-hidden rounded-[22px] bg-gradient-to-br from-[#2a0d16] via-[#1a070e] to-[#120409] p-space-md text-white border border-[#ff4d6d]/25 shadow-[0_16px_36px_-6px_rgba(255,40,85,0.22)]">
+<!-- Ambient Decorative Halo Graphic -->
+<div class="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-[#ff4d6d]/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-6 -bottom-6 w-36 h-36 rounded-full bg-[#80112e]/30 blur-2xl pointer-events-none"></div>
+<!-- Top Tag Controls -->
+<div class="relative z-10 flex items-center justify-between gap-2 mb-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 border border-white/10 backdrop-blur-md text-[#f1eff3] font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-[#ff758f]">school</span>
+<span class="font-medium">GST111 — English &amp; Logic</span>
+<span class="material-symbols-outlined text-[14px] text-[#b0b0bc]">expand_more</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#ff4d6d]/15 border border-[#ff4d6d]/30 backdrop-blur-md text-[#ffb2ba] font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ff4d6d] shadow-[0_0_8px_#ff4d6d] animate-pulse"></span>
+<span class="font-semibold">Live AI</span>
+</div>
+</div>
+<!-- Center Big Record Interaction -->
+<div class="relative z-10 flex flex-col items-center text-center py-2">
+<div class="relative flex items-center justify-center my-2">
+<!-- Animated Ring Echoes -->
+<div class="absolute w-28 h-28 rounded-full bg-[#ff4d6d]/15 animate-ping opacity-60"></div>
+<div class="absolute w-24 h-24 rounded-full bg-[#ff4d6d]/20 scale-105"></div>
+<!-- Tactile Record Button -->
+<button aria-label="Start Lecture Recording" class="relative z-20 w-16 h-16 rounded-full bg-gradient-to-b from-[#ff385c] to-[#d60036] text-white shadow-[0_0_24px_rgba(255,56,92,0.65)] flex items-center justify-center active:scale-95 transition-all hover:brightness-110 border border-white/30" id="record-hero-btn" type="button">
+<span class="material-symbols-outlined text-[32px] text-white" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+<h3 class="font-title-md text-title-md text-white font-semibold mt-2.5 tracking-tight">Start Lecture Recording</h3>
+<p class="font-body-sm text-body-sm text-[#d4cbd1] max-w-xs mt-1">Real-time speech-to-text, concept map extraction, and smart key terms.</p>
+</div>
+<!-- Live Features Badge Footer inside card -->
+<div class="relative z-10 mt-space-md pt-3 flex items-center justify-between text-[#d4cbd1] font-label-sm text-label-sm border-t border-white/[0.08]">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#ff758f]">graphic_eq</span>
+<span class="">Noise filter active</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#ff758f]">bolt</span>
+<span class="">Auto-summary: Ready</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Academic Stats Row -->
+<section class="px-margin-mobile py-space-sm">
+<div class="grid grid-cols-3 gap-2 bg-[#14141b] border border-white/[0.06] p-2.5 rounded-xl shadow-[0_4px_16px_rgba(0,0,0,0.35)]">
+<div class="flex flex-col items-center text-center p-2 rounded-lg bg-[#181822] border border-white/[0.04]">
+<span class="font-headline-sm text-headline-sm text-white font-bold tracking-tight">42</span>
+<span class="font-label-sm text-label-sm text-[#a29aa0] mt-0.5 leading-tight">Lectures Jot</span>
+</div>
+<div class="flex flex-col items-center text-center p-2 rounded-lg bg-[#181822] border border-white/[0.04]">
+<span class="font-headline-sm text-headline-sm text-white font-bold tracking-tight">184</span>
+<span class="font-label-sm text-label-sm text-[#a29aa0] mt-0.5 leading-tight">Flashcards</span>
+</div>
+<div class="flex flex-col items-center text-center p-2 rounded-lg bg-[#181822] border border-white/[0.04]">
+<span class="font-headline-sm text-headline-sm text-white font-bold tracking-tight">98%</span>
+<span class="font-label-sm text-label-sm text-[#a29aa0] mt-0.5 leading-tight">Transcription</span>
+</div>
+</div>
+</section>
+<!-- Recent Notes Section -->
+<section class="px-margin-mobile pt-space-md pb-space-sm flex flex-col gap-3">
+<!-- Header & Link -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-[#f1eff3] font-semibold">Recent Notes</h3>
+<span class="w-5 h-5 rounded-full bg-[#400d1c] border border-[#ff4d6d]/40 text-[#ffb2ba] font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+</div>
+<button class="font-label-sm text-label-sm text-[#ff758f] hover:text-[#ff94a8] font-semibold flex items-center gap-0.5 transition-colors" type="button">
+<span class="">View All (18)</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Category Chips Filter -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 -mx-margin-mobile px-margin-mobile no-scrollbar" id="filter-chips">
+<button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#ff385c] to-[#d60036] text-white font-label-md text-label-md font-semibold shadow-[0_0_12px_rgba(255,56,92,0.4)] transition-all" type="button">All Notes</button>
+<button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-[#181822] text-[#b0b0bc] border border-white/[0.06] hover:bg-[#20202d] hover:text-white font-label-md text-label-md transition-all" type="button">Today</button>
+<button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-[#181822] text-[#b0b0bc] border border-white/[0.06] hover:bg-[#20202d] hover:text-white font-label-md text-label-md transition-all" type="button">GST111</button>
+<button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-[#181822] text-[#b0b0bc] border border-white/[0.06] hover:bg-[#20202d] hover:text-white font-label-md text-label-md transition-all" type="button">EDU 102</button>
+<button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-[#181822] text-[#b0b0bc] border border-white/[0.06] hover:bg-[#20202d] hover:text-white font-label-md text-label-md transition-all" type="button">BIO 204</button>
+</div>
+<!-- Card 1: GST111 -->
+<article class="bg-[#181822] border border-white/[0.07] rounded-xl p-space-md shadow-[0_4px_20px_rgba(0,0,0,0.35)] flex flex-col gap-3 transition-transform active:scale-[0.99]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-[#300e19] border border-[#ff4d6d]/25 text-[#ff758f] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-white font-semibold leading-tight line-clamp-1">GST111 — English &amp; Logic</h4>
+<div class="flex items-center gap-1.5 text-[#b0b0bc] font-label-sm text-label-sm mt-0.5">
+<span class="text-[#ff758f] font-medium">Today, 10:15 AM</span>
+<span class="text-white/20">•</span>
+<span class="">54 mins</span>
+<span class="text-white/20">•</span>
+<span class="">Hall B</span>
+</div>
+</div>
+</div>
+<button aria-label="Bookmark note" class="w-8 h-8 rounded-full flex items-center justify-center text-[#b0b0bc] hover:text-white hover:bg-white/[0.06] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+<!-- AI Summary Content Snippet -->
+<div class="bg-[#1f1a24] border border-white/[0.04] rounded-lg p-2.5">
+<div class="flex items-center gap-1 text-[#ff758f] mb-1">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase">AI Summary</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#e4e1e6] leading-relaxed line-clamp-2">
+          Explored deductive vs inductive reasoning syllogisms, fallacy identification in academic discourse, and argumentative structure.
+        </p>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-[#35121b] border border-[#ff4d6d]/20 text-[#ffb2ba] font-label-sm text-label-sm">Definitions</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/[0.05] border border-white/[0.06] text-[#b0b0bc] font-label-sm text-label-sm">Exam Review</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/[0.05] border border-white/[0.06] text-[#b0b0bc] font-label-sm text-label-sm">Key Concepts</span>
+</div>
+<!-- Audio Scrubber / Mini Waveform Bar -->
+<div class="pt-2 flex items-center gap-3">
+<button aria-label="Play audio lecture" class="w-9 h-9 rounded-full bg-gradient-to-br from-[#ff385c] to-[#c70030] text-white flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(255,56,92,0.45)] active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex-1 flex flex-col gap-1">
+<!-- Waveform Visual Simulation -->
+<div class="flex items-center gap-0.5 h-4 w-full">
+<span class="w-1 bg-[#ff4d6d] rounded-full h-2 shadow-[0_0_4px_#ff4d6d]"></span>
+<span class="w-1 bg-[#ff4d6d] rounded-full h-3 shadow-[0_0_4px_#ff4d6d]"></span>
+<span class="w-1 bg-[#ff4d6d] rounded-full h-4 shadow-[0_0_4px_#ff4d6d]"></span>
+<span class="w-1 bg-[#ff4d6d] rounded-full h-2.5 shadow-[0_0_4px_#ff4d6d]"></span>
+<span class="w-1 bg-[#ff4d6d] rounded-full h-3.5 shadow-[0_0_4px_#ff4d6d]"></span>
+<span class="w-1 bg-[#ff4d6d] rounded-full h-2 shadow-[0_0_4px_#ff4d6d]"></span>
+<span class="w-1 bg-white/20 rounded-full h-1.5"></span>
+<span class="w-1 bg-white/20 rounded-full h-3"></span>
+<span class="w-1 bg-white/20 rounded-full h-4"></span>
+<span class="w-1 bg-white/20 rounded-full h-2"></span>
+<span class="w-1 bg-white/20 rounded-full h-3"></span>
+<span class="w-1 bg-white/20 rounded-full h-1.5"></span>
+<span class="w-1 bg-white/20 rounded-full h-2"></span>
+<span class="w-1 bg-white/20 rounded-full h-3.5"></span>
+<span class="w-1 bg-white/20 rounded-full h-2"></span>
+<span class="w-1 bg-white/20 rounded-full h-1"></span>
+<span class="w-1 bg-white/20 rounded-full h-2.5"></span>
+</div>
+<div class="flex justify-between text-[#a29aa0] font-label-sm text-label-sm">
+<span class="text-[#ff758f] font-medium">18:32</span>
+<span class="">54:12</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: EDU 102 -->
+<article class="bg-[#181822] border border-white/[0.07] rounded-xl p-space-md shadow-[0_4px_20px_rgba(0,0,0,0.35)] flex flex-col gap-3 transition-transform active:scale-[0.99]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-[#300e19] border border-[#ff4d6d]/25 text-[#ff758f] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-white font-semibold leading-tight line-clamp-1">EDU 102 — Philosophy of Education</h4>
+<div class="flex items-center gap-1.5 text-[#b0b0bc] font-label-sm text-label-sm mt-0.5">
+<span class="">Yesterday</span>
+<span class="text-white/20">•</span>
+<span class="">1 hr 12 mins</span>
+<span class="text-white/20">•</span>
+<span class="">Prof. Vance</span>
+</div>
+</div>
+</div>
+<button aria-label="Bookmark note" class="w-8 h-8 rounded-full flex items-center justify-center text-[#b0b0bc] hover:text-white hover:bg-white/[0.06] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+<div class="bg-[#1f1a24] border border-white/[0.04] rounded-lg p-2.5">
+<div class="flex items-center gap-1 text-[#ff758f] mb-1">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase">AI Summary</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#e4e1e6] leading-relaxed line-clamp-2">
+          Analyzed John Dewey’s experiential learning theory, constructivist pedagogy, and modern classroom engagement ethics.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-[#35121b] border border-[#ff4d6d]/20 text-[#ffb2ba] font-label-sm text-label-sm">Definitions</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/[0.05] border border-white/[0.06] text-[#b0b0bc] font-label-sm text-label-sm">Dewey</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/[0.05] border border-white/[0.06] text-[#b0b0bc] font-label-sm text-label-sm">Reading List</span>
+</div>
+<div class="pt-2 flex items-center gap-3">
+<button aria-label="Play audio lecture" class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-white/[0.12] text-[#ff758f] flex items-center justify-center shrink-0 border border-white/10 active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex-1 flex flex-col gap-1">
+<div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-[#ff4d6d] to-[#ff758f] h-full rounded-full w-2/5 shadow-[0_0_8px_#ff4d6d]"></div>
+</div>
+<div class="flex justify-between text-[#a29aa0] font-label-sm text-label-sm">
+<span class="">28:40</span>
+<span class="">1:12:00</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: BIO 204 -->
+<article class="bg-[#181822] border border-white/[0.07] rounded-xl p-space-md shadow-[0_4px_20px_rgba(0,0,0,0.35)] flex flex-col gap-3 transition-transform active:scale-[0.99]">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-[#300e19] border border-[#ff4d6d]/25 text-[#ff758f] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">biotech</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-white font-semibold leading-tight line-clamp-1">BIO 204 — Cellular Biochemistry</h4>
+<div class="flex items-center gap-1.5 text-[#b0b0bc] font-label-sm text-label-sm mt-0.5">
+<span class="">Oct 24</span>
+<span class="text-white/20">•</span>
+<span class="">48 mins</span>
+<span class="text-white/20">•</span>
+<span class="">Lab 3</span>
+</div>
+</div>
+</div>
+<button aria-label="Bookmark note" class="w-8 h-8 rounded-full flex items-center justify-center text-[#b0b0bc] hover:text-white hover:bg-white/[0.06] transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+</button>
+</div>
+<div class="bg-[#1f1a24] border border-white/[0.04] rounded-lg p-2.5">
+<div class="flex items-center gap-1 text-[#ff758f] mb-1">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase">AI Summary</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#e4e1e6] leading-relaxed line-clamp-2">
+          ATP synthesis via oxidative phosphorylation across mitochondrial inner membrane and proton gradient mechanics.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-[#35121b] border border-[#ff4d6d]/20 text-[#ffb2ba] font-label-sm text-label-sm">Diagrams</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/[0.05] border border-white/[0.06] text-[#b0b0bc] font-label-sm text-label-sm">Definitions</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/[0.05] border border-white/[0.06] text-[#b0b0bc] font-label-sm text-label-sm">High Yield</span>
+</div>
+<div class="pt-2 flex items-center gap-3">
+<button aria-label="Play audio lecture" class="w-9 h-9 rounded-full bg-white/[0.08] hover:bg-white/[0.12] text-[#ff758f] flex items-center justify-center shrink-0 border border-white/10 active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex-1 flex flex-col gap-1">
+<div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-[#ff4d6d] to-[#ff758f] h-full rounded-full w-4/5 shadow-[0_0_8px_#ff4d6d]"></div>
+</div>
+<div class="flex justify-between text-[#a29aa0] font-label-sm text-label-sm">
+<span class="">38:15</span>
+<span class="">48:00</span>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Flashcard Quick Review Banner -->
+<section class="px-margin-mobile pt-space-xs pb-space-lg">
+<div class="bg-gradient-to-r from-[#290c15] via-[#1a0810] to-[#14141c] border border-[#ff4d6d]/25 p-space-md rounded-xl flex items-center justify-between gap-3 shadow-[0_8px_24px_rgba(0,0,0,0.4)]">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-full bg-[#400d1c] border border-[#ff4d6d]/30 text-[#ff758f] flex items-center justify-center shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[22px]">quiz</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-title-sm text-title-sm text-white font-semibold truncate leading-tight">Exam Prep: 28 Cards Due</h4>
+<p class="font-body-sm text-body-sm text-[#b0b0bc] truncate">GST111 &amp; EDU 102 review queues</p>
+</div>
+</div>
+<button class="shrink-0 px-4 py-2 rounded-lg bg-gradient-to-r from-[#ff385c] to-[#d60036] text-white font-label-md text-label-md font-semibold hover:brightness-110 active:scale-95 transition-all shadow-[0_0_14px_rgba(255,56,92,0.4)] border border-white/20" type="button">
+        Practice
+      </button>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    // Record Button Pulse Micro-Interaction
+    const recordBtn = document.getElementById('record-hero-btn');
+    if (recordBtn) {
+      let recording = false;
+      recordBtn.addEventListener('click', function() {
+        recording = !recording;
+        if (recording) {
+          recordBtn.classList.remove('from-[#ff385c]', 'to-[#d60036]');
+          recordBtn.classList.add('from-[#990024]', 'to-[#5c0016]', 'scale-105', 'ring-4', 'ring-[#ff4d6d]/40');
+          const icon = recordBtn.querySelector('.material-symbols-outlined');
+          if (icon) icon.textContent = 'stop';
+        } else {
+          recordBtn.classList.add('from-[#ff385c]', 'to-[#d60036]');
+          recordBtn.classList.remove('from-[#990024]', 'to-[#5c0016]', 'scale-105', 'ring-4', 'ring-[#ff4d6d]/40');
+          const icon = recordBtn.querySelector('.material-symbols-outlined');
+          if (icon) icon.textContent = 'mic';
+        }
+      });
+    }
+
+    // Filter Chips Toggle
+    const filterContainer = document.getElementById('filter-chips');
+    if (filterContainer) {
+      const chips = filterContainer.querySelectorAll('.filter-chip');
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          chips.forEach(c => {
+            c.classList.remove('bg-gradient-to-r', 'from-[#ff385c]', 'to-[#d60036]', 'text-white', 'shadow-[0_0_12px_rgba(255,56,92,0.4)]');
+            c.classList.add('bg-[#181822]', 'text-[#b0b0bc]', 'border', 'border-white/[0.06]');
+          });
+          chip.classList.remove('bg-[#181822]', 'text-[#b0b0bc]', 'border', 'border-white/[0.06]');
+          chip.classList.add('bg-gradient-to-r', 'from-[#ff385c]', 'to-[#d60036]', 'text-white', 'shadow-[0_0_12px_rgba(255,56,92,0.4)]');
+        });
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-[#0e0e11]/90 backdrop-blur-xl border-t border-white/[0.06] shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-[#ff4d6d] font-semibold"><div class="flex justify-around items-center h-16 px-space-sm"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 transition-colors group text-[#ff4d6d] font-semibold" data-path="home-dashboard" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center group-hover:bg-white/[0.06] transition-colors"><span class="material-symbols-outlined text-[22px] drop-shadow-[0_0_6px_rgba(255,77,109,0.5)]">cottage</span></div><span class="font-label-md text-label-md">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 text-[#a29aa0] hover:text-[#f1eff3] transition-colors group" data-path="all-recordings" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center group-hover:bg-white/[0.06] transition-colors"><span class="material-symbols-outlined text-[22px]">mic</span></div><span class="font-label-md text-label-md">Recordings</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 text-[#a29aa0] hover:text-[#f1eff3] transition-colors group" data-path="summaries-flashcards" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center group-hover:bg-white/[0.06] transition-colors"><span class="material-symbols-outlined text-[22px]">auto_awesome</span></div><span class="font-label-md text-label-md">Review</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 text-[#a29aa0] hover:text-[#f1eff3] transition-colors group" data-path="profile-settings" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center group-hover:bg-white/[0.06] transition-colors"><span class="material-symbols-outlined text-[22px]">tune</span></div><span class="font-label-md text-label-md">Settings</span></a></div></nav>
+</body></html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-error-container": "#ffdad6",
+          "inverse-primary": "#ba1340",
+          "secondary": "#ffb2ba",
+          "surface-container-high": "#2a2a2d",
+          "on-secondary": "#640921",
+          "outline-variant": "#5a4042",
+          "surface-container-lowest": "#0e0e11",
+          "surface-tint": "#ffb2b8",
+          "on-secondary-container": "#ff97a4",
+          "inverse-surface": "#e4e1e6",
+          "error-container": "#93000a",
+          "on-tertiary-fixed": "#2a1700",
+          "surface-container": "#1f1f22",
+          "on-error": "#690005",
+          "on-primary-fixed-variant": "#91002d",
+          "tertiary-container": "#ca8100",
+          "primary-container": "#ff506f",
+          "surface": "#131316",
+          "on-surface-variant": "#e2bec0",
+          "background": "#0e0e11",
+          "surface-variant": "#353438",
+          "surface-dim": "#131316",
+          "on-tertiary-fixed-variant": "#653e00",
+          "primary-fixed": "#ffdadb",
+          "on-primary-container": "#5b0019",
+          "on-secondary-fixed": "#400010",
+          "surface-container-low": "#1b1b1e",
+          "inverse-on-surface": "#303033",
+          "on-primary": "#ffffff",
+          "on-primary-fixed": "#40000f",
+          "outline": "#a9898b",
+          "tertiary": "#ffb95f",
+          "secondary-fixed": "#ffd9dc",
+          "primary": "#ff4d6d",
+          "tertiary-fixed": "#ffddb8",
+          "surface-bright": "#39393c",
+          "on-surface": "#f3f3f6",
+          "on-tertiary-container": "#3e2400",
+          "on-tertiary": "#472a00",
+          "secondary-container": "#832336",
+          "secondary-fixed-dim": "#ffb2ba",
+          "on-background": "#e4e1e6",
+          "on-secondary-fixed-variant": "#832336",
+          "surface-container-highest": "#353438",
+          "primary-fixed-dim": "#ffb2b8",
+          "error": "#ffb4ab",
+          "tertiary-fixed-dim": "#ffb95f"
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        spacing: {
+          "margin": "2.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "space-sm": "0.5rem",
+          "gutter": "1.5rem",
+          "gutter-sm": "1rem",
+          "space-md": "1rem",
+          "space-xl": "2.5rem"
+        },
+        fontFamily: {
+          "body-lg": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Newsreader"],
+          "title-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "display-lg": ["Newsreader"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-md": ["Newsreader"],
+          "headline-lg": ["Newsreader"]
+        },
+        fontSize: {
+          "body-lg": ["1.125rem", { "lineHeight": "1.875rem", "fontWeight": "400" }],
+          "body-sm": ["0.875rem", { "lineHeight": "1.375rem", "fontWeight": "400" }],
+          "label-lg": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600" }],
+          "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+          "title-sm": ["1rem", { "lineHeight": "1.375rem", "fontWeight": "600" }],
+          "title-md": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }],
+          "body-md": ["1rem", { "lineHeight": "1.625rem", "fontWeight": "400" }],
+          "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+          "display-lg": ["3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+          "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.04em", "fontWeight": "700" }],
+          "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "headline-md": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+          "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.015em", "fontWeight": "500" }]
+        }
+      }
+    }
+  }
+</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-[#0e0e11] font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-rose-900/50 selection:text-rose-200"><header class="fixed top-0 inset-x-0 z-50 bg-[#131318]/90 backdrop-blur-xl border-b border-white/[0.06] pt-safe shadow-[0_4px_24px_rgba(0,0,0,0.5)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="LectureJot Logo" class="h-8 w-auto object-contain shrink-0 drop-shadow-[0_0_8px_rgba(255,77,109,0.35)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAloMXsUgo3PWqa-M3Rv91MxVRzSCDXGyMan9tSrmnP-qdAkZDXK3xsVeU-DnkLz-WkgpKxIdHVAQY-ngbFlX4Mxb3GKUx9JyxWXjQsWTDRtO4GBg3UuF88UaUHAPBrgRxmfXc2C83SHQlmgNr4S1MxRcogjITH1TX2rvlir54eXnZfH8bkWRVFE5tk9GkWENO8s7inl18hFJPtty2fMnrFFzPU8X7TZWrxbH7jqbScWXOA3ePNDq5SyQ"/><div class="flex flex-col truncate"><div class="flex items-center gap-1.5"><span class="font-label-sm text-label-sm uppercase tracking-wider text-[#ff4d6d] font-bold">LAZY STUDENT</span><span class="w-1 h-1 rounded-full bg-rose-500/60"></span><span class="font-label-sm text-label-sm text-neutral-400 font-medium">Term II</span></div><h1 class="font-title-sm text-title-sm text-[#f3f3f6] truncate font-semibold leading-tight">Home Dashboard</h1></div></div><div class="flex items-center gap-1 shrink-0"><button aria-label="Search notes" class="w-10 h-10 rounded-full flex items-center justify-center text-neutral-400 hover:text-neutral-100 hover:bg-white/[0.06] transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="w-10 h-10 rounded-full flex items-center justify-center text-neutral-400 hover:text-neutral-100 hover:bg-white/[0.06] relative transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#ff4d6d] ring-2 ring-[#131318] shadow-[0_0_6px_#ff4d6d]"></span></button><div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#ff4d6d] to-[#9b1d36] flex items-center justify-center ml-1 shrink-0 shadow-sm ring-1 ring-white/10"><span class="material-symbols-outlined text-white text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-[#0e0e11]"><div class="flex flex-col w-full px-margin-mobile pb-8 space-y-4 pt-3">
+<!-- Lecture Status Header Pill & Meta -->
+<div class="flex flex-col bg-[#16161f] border border-white/[0.08] p-space-md rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.35)] space-y-3">
+<div class="flex items-center justify-between gap-2">
+<!-- Course Code Tag & Rec Status -->
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#2a131a] border border-[#ff4d6d]/30 text-[#ffb2ba] font-label-md text-label-md font-bold tracking-tight shadow-[0_0_12px_rgba(255,77,109,0.15)]">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ff4d6d] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#ff4d6d]"></span>
+</span>
+          REC
+        </span>
+<span class="font-headline-sm text-headline-sm text-white font-bold tabular-nums tracking-tight" id="timerDisplay">
+          00:15:36
+        </span>
+</div>
+<!-- Quick Dim / Dark Lecture Mode Toggle -->
+<button aria-label="Toggle Lecture Hall Dim Mode" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#22222d] border border-white/[0.08] text-rose-200/90 font-label-md text-label-md hover:bg-[#2b2b3a] transition-all shadow-inner" id="lectureModeToggle" onclick="toggleDimMode()" type="button">
+<span class="material-symbols-outlined text-[18px] text-[#ffb2ba]" id="dimIcon">dark_mode</span>
+<span id="dimText">Dim Hall: Active</span>
+</button>
+</div>
+<!-- Course & Lecturer Context -->
+<div class="flex items-start justify-between">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-[#ff4d6d] font-bold tracking-wider uppercase">GST111</span>
+<span class="text-neutral-600">•</span>
+<span class="font-body-sm text-body-sm text-neutral-400 truncate">English &amp; Logic</span>
+</div>
+<p class="font-title-sm text-title-sm text-[#f3f3f6] font-semibold truncate mt-0.5">
+          Prof. Vance • Lecture Hall B
+        </p>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 bg-[#20202b]/90 border border-white/[0.05] rounded-lg shrink-0 backdrop-blur">
+<span class="material-symbols-outlined text-[16px] text-[#ffb2ba]">wifi</span>
+<span class="font-label-sm text-label-sm text-neutral-300 font-semibold">Cloud Sync</span>
+</div>
+</div>
+</div>
+<!-- Audio Waveform Visualizer & Noise Suppression Card -->
+<div class="flex flex-col bg-gradient-to-br from-[#260c14] via-[#1d0910] to-[#14060b] text-[#f3f3f6] rounded-xl p-space-md border border-[#ff4d6d]/20 shadow-[0_8px_32px_-4px_rgba(255,77,109,0.18)] relative overflow-hidden">
+<!-- Ambient Dark Rose Glow Accent -->
+<div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-[#ff4d6d]/15 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-8 -bottom-8 w-28 h-28 rounded-full bg-[#ca8100]/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#ff4d6d] text-[20px] animate-pulse drop-shadow-[0_0_8px_rgba(255,77,109,0.6)]">graphic_eq</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#ffb2ba] font-bold">Live AI Stream</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/40 border border-white/10 backdrop-blur text-emerald-300 font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_6px_#34d399]"></span>
+<span>99.2% Clarity</span>
+</div>
+</div>
+<!-- Real-Time Frequency Waveform Animation -->
+<div class="py-4 flex items-center justify-between gap-1 h-16 px-1 z-10" id="waveformContainer">
+<div class="w-1.5 bg-[#ff4d6d]/80 rounded-full h-4 animate-[bounce_0.8s_ease-in-out_infinite] shadow-[0_0_6px_rgba(255,77,109,0.4)]"></div>
+<div class="w-1.5 bg-[#ffb2ba] rounded-full h-8 animate-[pulse_0.6s_ease-in-out_infinite] shadow-[0_0_8px_rgba(255,178,186,0.3)]"></div>
+<div class="w-1.5 bg-white rounded-full h-12 animate-[bounce_1.1s_ease-in-out_infinite] shadow-[0_0_10px_rgba(255,255,255,0.6)]"></div>
+<div class="w-1.5 bg-[#ff4d6d] rounded-full h-7 animate-[pulse_0.9s_ease-in-out_infinite]"></div>
+<div class="w-1.5 bg-[#ff8998] rounded-full h-14 animate-[bounce_0.7s_ease-in-out_infinite] shadow-[0_0_10px_rgba(255,77,109,0.5)]"></div>
+<div class="w-1.5 bg-white rounded-full h-10 animate-[pulse_1s_ease-in-out_infinite]"></div>
+<div class="w-1.5 bg-[#ffb2ba] rounded-full h-6 animate-[bounce_1.3s_ease-in-out_infinite]"></div>
+<div class="w-1.5 bg-[#ff4d6d] rounded-full h-12 animate-[pulse_0.8s_ease-in-out_infinite] shadow-[0_0_8px_rgba(255,77,109,0.4)]"></div>
+<div class="w-1.5 bg-white rounded-full h-14 animate-[bounce_0.95s_ease-in-out_infinite] shadow-[0_0_12px_rgba(255,255,255,0.5)]"></div>
+<div class="w-1.5 bg-[#ffb2ba] rounded-full h-5 animate-[pulse_1.2s_ease-in-out_infinite]"></div>
+<div class="w-1.5 bg-[#ff4d6d] rounded-full h-11 animate-[bounce_0.75s_ease-in-out_infinite]"></div>
+<div class="w-1.5 bg-[#ff8998] rounded-full h-8 animate-[pulse_0.65s_ease-in-out_infinite]"></div>
+<div class="w-1.5 bg-white rounded-full h-13 animate-[bounce_1.05s_ease-in-out_infinite] shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
+<div class="w-1.5 bg-[#ffb2ba] rounded-full h-6 animate-[pulse_0.85s_ease-in-out_infinite]"></div>
+<div class="w-1.5 bg-[#ff4d6d]/80 rounded-full h-3 animate-[bounce_1.15s_ease-in-out_infinite]"></div>
+</div>
+<!-- Status Strip Footer -->
+<div class="flex items-center justify-between text-neutral-300 z-10 pt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#ffb2ba]">hearing</span>
+<span class="text-rose-100/90">Acoustic Isolation Active</span>
+</div>
+<span class="text-neutral-400">Hall B mic calibrated</span>
+</div>
+</div>
+<!-- Raw Speech Feed (Live High-Contrast Transcription) -->
+<div class="flex flex-col bg-[#16161f] border border-white/[0.08] p-space-md rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.3)] space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#ff4d6d] shadow-[0_0_8px_#ff4d6d]"></span>
+<h2 class="font-label-lg text-label-lg text-white font-bold uppercase tracking-wider">
+          Speech Stream
+        </h2>
+</div>
+<span class="font-label-sm text-label-sm text-neutral-400 font-medium">Auto-scrolling</span>
+</div>
+<!-- Active Transcribed Sentences -->
+<div class="space-y-2.5">
+<p class="font-body-md text-body-md text-neutral-300 leading-relaxed">
+        "...so we have established that Aristotle framed the categorical syllogism with three specific terms: the major, the minor, and the middle connector."
+      </p>
+<!-- Current Spoken Sentence (High Visibility Dark Burgundy Highlight) -->
+<div class="p-3 bg-[#260f17] border border-rose-900/50 rounded-lg shadow-inner">
+<p class="font-title-md text-title-md text-[#ffd9dc] font-medium leading-snug">
+          "Now, notice carefully that deductive validity guarantees the absolute truth of the conclusion if all premises are sound..."
+          <span class="inline-block w-2 h-4 bg-[#ff4d6d] align-middle ml-1 animate-pulse shadow-[0_0_8px_#ff4d6d]"></span>
+</p>
+</div>
+</div>
+</div>
+<!-- Real-time Structured Academic Jots -->
+<div class="flex flex-col space-y-3">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-[#ff4d6d]">psychology</span>
+<h3 class="font-label-lg text-label-lg text-white font-bold">Real-time Lecture Jots</h3>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#1e1e28] border border-white/[0.06] font-label-sm text-label-sm text-neutral-300">
+<span class="material-symbols-outlined text-[14px] text-[#ff4d6d]">sync</span>
+        GST111 Syllabus
+      </span>
+</div>
+<!-- Jot 1: Key Concept Definition -->
+<div class="bg-[#16161f] border border-white/[0.08] rounded-xl p-space-md shadow-[0_4px_16px_rgba(0,0,0,0.3)] space-y-2">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-[#2f1816] border border-amber-500/30 flex items-center justify-center text-amber-300 shrink-0 shadow-[0_0_10px_rgba(251,191,36,0.2)]">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm font-bold text-[#ffb2ba] uppercase tracking-wide">Key Concept</span>
+<h4 class="font-title-sm text-title-sm text-white font-semibold leading-tight">
+            Deductive vs Inductive Inferences
+          </h4>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-[#d0d0dc] leading-relaxed pl-9">
+        Deduction moves from general universally true laws to inevitable specific instances. Induction generalizes probabilistic conclusions based on finite empirical observations.
+      </p>
+</div>
+<!-- Jot 2: Dates & Deadlines Alert -->
+<div class="bg-[#16161f] border border-white/[0.08] rounded-xl p-space-md shadow-[0_4px_16px_rgba(0,0,0,0.3)] space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-[#2a131a] border border-[#ff4d6d]/30 flex items-center justify-center text-[#ff8998] shrink-0">
+<span class="material-symbols-outlined text-[18px]">event_upcoming</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm font-bold text-[#ffb2ba] uppercase tracking-wide">Announcements &amp; Dates</span>
+<h4 class="font-title-sm text-title-sm text-white font-semibold leading-tight">
+              Action Items Identified
+            </h4>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-[#4a0815] border border-rose-500/40 text-rose-200 font-label-sm text-label-sm font-bold shadow-[0_0_8px_rgba(255,77,109,0.3)]">Urgent</span>
+</div>
+<div class="space-y-2 pl-9">
+<div class="flex items-start gap-2.5 bg-[#20202d] border border-white/[0.05] p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-[#ff4d6d] shrink-0 mt-0.5">calendar_month</span>
+<div class="min-w-0 flex-1">
+<p class="font-body-sm text-body-sm text-[#f3f3f6] font-semibold">Midterm Paper Submission</p>
+<p class="font-label-sm text-label-sm text-neutral-400">Nov 14th by 11:59 PM • Canvas Portal</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5 bg-[#20202d] border border-white/[0.05] p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-[#ffb2ba] shrink-0 mt-0.5">group</span>
+<div class="min-w-0 flex-1">
+<p class="font-body-sm text-body-sm text-[#f3f3f6] font-semibold">Tutorial Group Defense</p>
+<p class="font-label-sm text-label-sm text-neutral-400">Next Tuesday in Hall B breakout suites</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Jot 3: Structured Arguments Bullet List -->
+<div class="bg-[#16161f] border border-white/[0.08] rounded-xl p-space-md shadow-[0_4px_16px_rgba(0,0,0,0.3)] space-y-2.5">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-[#232330] border border-white/10 flex items-center justify-center text-neutral-200 shrink-0">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</div>
+<h4 class="font-title-sm text-title-sm text-white font-semibold">
+          Lecture Arguments (Core Tenets)
+        </h4>
+</div>
+<ul class="space-y-2 pl-9 font-body-sm text-body-sm text-[#d0d0dc]">
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ff4d6d] mt-2 shrink-0 shadow-[0_0_6px_#ff4d6d]"></span>
+<span><strong class="text-white font-semibold">Universal quantification:</strong> The major premise must state a complete categorical rule without subjective qualifiers.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ff4d6d] mt-2 shrink-0 shadow-[0_0_6px_#ff4d6d]"></span>
+<span><strong class="text-white font-semibold">Structural validity:</strong> Validity assesses only structural cohesion, completely detached from empirical or factual accuracy.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ff4d6d] mt-2 shrink-0 shadow-[0_0_6px_#ff4d6d]"></span>
+<span><strong class="text-white font-semibold">Logical soundness:</strong> An argument is sound <em class="text-[#ffb2ba]">only</em> when both valid syllogistic form and empirically verified premises coincide.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Interactive Floating Dock for Bottom Controls -->
+<div class="sticky bottom-3 z-40 w-full pt-2">
+<div class="flex items-center justify-between gap-3 bg-[#181822]/95 border border-white/[0.1] backdrop-blur-2xl p-2.5 rounded-full shadow-[0_16px_40px_rgba(0,0,0,0.65),0_0_24px_rgba(255,77,109,0.15)]">
+<!-- Pause / Resume Button -->
+<button aria-label="Pause Recording" class="flex flex-col items-center justify-center w-14 h-14 rounded-full bg-[#242432] border border-white/[0.08] text-neutral-200 hover:text-white hover:bg-[#2e2e40] active:scale-95 transition-all shadow-sm shrink-0" id="pauseBtn" onclick="togglePause()" type="button">
+<span class="material-symbols-outlined text-[24px]" id="pauseIcon">pause</span>
+<span class="font-label-sm text-label-sm font-semibold -mt-0.5" id="pauseLabel">Pause</span>
+</button>
+<!-- Primary Stop & Process Action -->
+<button aria-label="Stop recording and synthesize notes" class="flex-1 h-14 rounded-full bg-gradient-to-r from-[#ff4d6d] via-[#d92348] to-[#9b1d36] hover:brightness-110 text-white flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(255,77,109,0.45)] border border-rose-400/30 active:scale-98 transition-all px-4" onclick="finishRecording()" type="button">
+<span class="material-symbols-outlined text-[24px] text-white fill-current drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]">stop_circle</span>
+<span class="font-title-sm text-title-sm font-bold tracking-tight text-white drop-shadow-sm">Stop &amp; Save</span>
+</button>
+<!-- Bookmark / Highlight Action -->
+<button aria-label="Add Bookmark Highlight" class="flex flex-col items-center justify-center w-14 h-14 rounded-full bg-[#242432] border border-white/[0.08] text-[#ff8998] hover:text-[#ffb2ba] hover:bg-[#2e2e40] active:scale-95 transition-all shadow-sm shrink-0 relative" id="highlightBtn" onclick="addHighlight()" type="button">
+<span class="material-symbols-outlined text-[24px]">bookmark_add</span>
+<span class="font-label-sm text-label-sm font-semibold -mt-0.5 text-neutral-300" id="highlightCount">3 Marks</span>
+<span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#ff4d6d] text-white font-label-sm text-label-sm flex items-center justify-center font-bold scale-0 transition-transform shadow-[0_0_8px_#ff4d6d]" id="highlightBadge">
+          +1
+        </span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  let seconds = 936; // 00:15:36
+  let isPaused = false;
+  let highlights = 3;
+  let dimMode = true;
+
+  const timerEl = document.getElementById('timerDisplay');
+  const pauseIcon = document.getElementById('pauseIcon');
+  const pauseLabel = document.getElementById('pauseLabel');
+  const highlightCount = document.getElementById('highlightCount');
+  const highlightBadge = document.getElementById('highlightBadge');
+
+  // Live Timer Loop
+  setInterval(() => {
+    if (!isPaused) {
+      seconds++;
+      const hrs = Math.floor(seconds / 3600);
+      const mins = Math.floor((seconds % 3600) / 60);
+      const secs = seconds % 60;
+      timerEl.textContent = 
+        String(hrs).padStart(2, '0') + ':' + 
+        String(mins).padStart(2, '0') + ':' + 
+        String(secs).padStart(2, '0');
+    }
+  }, 1000);
+
+  function togglePause() {
+    isPaused = !isPaused;
+    if (isPaused) {
+      pauseIcon.textContent = 'play_arrow';
+      pauseLabel.textContent = 'Resume';
+      timerEl.classList.remove('text-white');
+      timerEl.classList.add('text-neutral-500');
+    } else {
+      pauseIcon.textContent = 'pause';
+      pauseLabel.textContent = 'Pause';
+      timerEl.classList.remove('text-neutral-500');
+      timerEl.classList.add('text-white');
+    }
+  }
+
+  function addHighlight() {
+    highlights++;
+    highlightCount.textContent = highlights + ' Marks';
+    highlightBadge.classList.remove('scale-0');
+    highlightBadge.classList.add('scale-100');
+    setTimeout(() => {
+      highlightBadge.classList.remove('scale-100');
+      highlightBadge.classList.add('scale-0');
+    }, 900);
+  }
+
+  function toggleDimMode() {
+    dimMode = !dimMode;
+    const icon = document.getElementById('dimIcon');
+    const label = document.getElementById('dimText');
+    
+    if (dimMode) {
+      icon.textContent = 'dark_mode';
+      label.textContent = 'Dim Hall: Active';
+    } else {
+      icon.textContent = 'light_mode';
+      label.textContent = 'Standard';
+    }
+  }
+
+  function finishRecording() {
+    alert("Lecture recording stopped! Processing notes, audio transcript, and automated flashcards for GST111.");
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-[#131318]/90 backdrop-blur-xl border-t border-white/[0.06] shadow-[0_-4px_24px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-sm"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 text-[#ff4d6d] font-semibold transition-colors group" data-path="home-dashboard" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center bg-rose-500/15 text-[#ff4d6d] transition-colors"><span class="material-symbols-outlined text-[22px] drop-shadow-[0_0_8px_rgba(255,77,109,0.6)]">cottage</span></div><span class="font-label-md text-label-md text-[#ff4d6d]">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 text-neutral-400 hover:text-neutral-200 transition-colors group" data-path="all-recordings" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center group-hover:bg-white/[0.06] transition-colors"><span class="material-symbols-outlined text-[22px]">mic</span></div><span class="font-label-md text-label-md">Recordings</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 text-neutral-400 hover:text-neutral-200 transition-colors group" data-path="summaries-flashcards" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center group-hover:bg-white/[0.06] transition-colors"><span class="material-symbols-outlined text-[22px]">auto_awesome</span></div><span class="font-label-md text-label-md">Review</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] h-12 text-neutral-400 hover:text-neutral-200 transition-colors group" data-path="profile-settings" href="#"><div class="w-10 h-7 rounded-full flex items-center justify-center group-hover:bg-white/[0.06] transition-colors"><span class="material-symbols-outlined text-[22px]">tune</span></div><span class="font-label-md text-label-md">Settings</span></a></div></nav>
+</body></html>
