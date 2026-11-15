@@ -15,7 +15,7 @@ import { INITIAL_COURSES, INITIAL_NOTES, INITIAL_FLASHCARDS } from './data/mockD
 
 export default function App() {
   const [isDark, setIsDark] = useState(() => {
-    return localStorage.getItem('lecturejot_theme') === 'dark';
+    return localStorage.getItem('lazystudent_theme') === 'dark';
   });
 
   const [isDimHall, setIsDimHall] = useState(false);
@@ -43,10 +43,10 @@ export default function App() {
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add('dark');
-      localStorage.setItem('lecturejot_theme', 'dark');
+      localStorage.setItem('lazystudent_theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('lecturejot_theme', 'light');
+      localStorage.setItem('lazystudent_theme', 'light');
     }
   }, [isDark]);
 

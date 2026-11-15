@@ -209,7 +209,7 @@ export default function SettingsModal({
 
       {/* App Version Info */}
       <div className="text-center pt-2 text-xs text-on-surface-variant">
-        LectureJot v2.4.0 • Academic Modernism Suite
+        lazyStudent v2.4.0 • Academic Modernism Suite
       </div>
     </div>
   );

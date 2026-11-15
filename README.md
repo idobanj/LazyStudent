@@ -1,4 +1,4 @@
-# LectureJot — Modern Academic Voice Recorder & Live AI Notes
+# lazyStudent — Modern Academic Voice Recorder & Live AI Notes
 
 Built with **React 18**, **Vite**, **Tailwind CSS**, and adhering to the **Academic Modernism** and **Academic Modernism Dark** design specifications.
 

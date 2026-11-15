@@ -17,7 +17,7 @@ export default function Header({
         {/* Brand & Context */}
         <div className="flex items-center gap-space-sm min-w-0">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary via-primary-container to-secondary flex items-center justify-center shrink-0 shadow-sm text-white font-serif font-bold text-lg select-none">
-            LJ
+            LS
           </div>
 
           <div className="flex flex-col truncate">
